@@ -10,10 +10,16 @@ export default (appInfo: MidwayAppInfo) => {
     },
     grpc: {
       services: [
+        // 一个模块一个对象
         {
           package: 'com.codenotfound.grpc.helloworld',
           url: 'localhost:6565',
           protoPath: resolve(__dirname, '../../proto/HelloWorld.proto'),
+        },
+        {
+          package: 'com.codenotfound.grpc.user',
+          url: 'localhost:6565',
+          protoPath: resolve(__dirname, '../../proto/user.proto'),
         },
       ],
     },

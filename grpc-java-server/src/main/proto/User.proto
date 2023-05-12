@@ -1,0 +1,18 @@
+syntax = 'proto3';
+
+option java_multiple_files = true;
+package com.codenotfound.grpc.user;
+
+message RequestParams {
+  string username = 1;
+  int32 age = 2;
+}
+
+message Response {
+  string username = 1;
+  int32 age = 2;
+}
+
+service UserService {
+  rpc getUser (RequestParams) returns (Response);
+}

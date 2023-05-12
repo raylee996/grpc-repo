@@ -32,7 +32,7 @@ export class HelloWorldService
     // 调用服务
     const result = await this.helloWorldService.sayHello().sendMessage({
       first_name: 'harry',
-      last_name: 'porter',
+      // last_name: 'porter',
     });
 
     // 返回结果
